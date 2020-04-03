@@ -1,4 +1,4 @@
-package hw01;
+package danit.hw01;
 
 class HelloWorldAppTest {
 
