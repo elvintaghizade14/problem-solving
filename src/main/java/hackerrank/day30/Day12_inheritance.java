@@ -2,7 +2,7 @@ package hackerrank.day30;
 
 import java.util.Scanner;
 
-public class Day12_Inheritance {
+public class Day12_inheritance {
   public static void main(String[] args) {
     Scanner scan = new Scanner(System.in);
     String firstName = scan.next();
