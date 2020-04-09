@@ -23,22 +23,21 @@ public class Day11_2D_array {
             {-1, -3, -1, -2, -4, -5}
     };
 
-
     System.out.println(maxHour(arr));
     System.out.println(maxHour(arr2));
+
   }
 
   private static int maxHour(int[][] arr) {
-    int max = 0;
-    for (int row = 1; row < 5; row++) {
-      for (int col = 1; col < 5; col++) {
-        int sum = arr[row - 1][col - 1] + arr[row - 1][col] + arr[row - 1][col + 1] +
-                arr[row][col] +
-                arr[row + 1][col - 1] + arr[row + 1][col] + arr[row + 1][col + 1];
+    int max = Integer.MIN_VALUE;
+    for (int i = 0; i < arr.length - 2; i++) {
+      for (int j = 0; j < arr[0].length - 2; j++) {
+        int sum = arr[i][j] + arr[i][j + 1] + arr[i][j + 2] + arr[i + 1][j + 1] +
+                arr[i + 2][j] + arr[i + 2][j + 1] + arr[i + 2][j + 2];
+//        sum = sum < 0 ? -sum : sum;
         max = Math.max(max, sum);
       }
     }
-//    return max;
-    throw new IllegalArgumentException("Not implemented correctly. Need for rewriting..");
+    return max;
   }
 }
