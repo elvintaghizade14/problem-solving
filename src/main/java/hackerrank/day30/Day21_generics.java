@@ -1,6 +1,5 @@
 package hackerrank.day30;
 
-import java.util.Iterator;
 import java.util.Scanner;
 
 public class Day21_generics {
