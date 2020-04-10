@@ -29,12 +29,6 @@ public class Day21_generics {
   }
 }
 
-/**
- * Method Name: printArray
- * Print each element of the generic array on a new line. Do not return anything.
- *
- * @param <T> generic array
- **/
 class Printer<T> {
   public void printArray(T[] input) {
     for (T item : input) {
