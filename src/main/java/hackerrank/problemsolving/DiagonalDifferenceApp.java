@@ -17,11 +17,13 @@ public class DiagonalDifferenceApp {
     int result1 = diagonalDifference1(data);
     int result2 = diagonalDifference2(data);
     int result3 = diagonalDifference3(data);
+    int result4 = diagonalDifference4(data);
 
     // 3. output
     System.out.println(result1);
     System.out.println(result2);
     System.out.println(result3);
+    System.out.println(result4);
   }
 
   private static int diagonalDifference1(List<List<Integer>> data) {
@@ -58,5 +60,12 @@ public class DiagonalDifferenceApp {
             .map(i -> data.get(i).get(len - 1 - i))
             .sum();
     return Math.abs(sum_d1 - sum_d2);
+  }
+
+  private static int diagonalDifference4(List<List<Integer>> data) {
+    int len = data.size();
+    return Math.abs(IntStream.range(0, len)
+            .map(i -> data.get(i).get(i) - data.get(i).get(len - 1 - i))
+            .sum());
   }
 }
