@@ -7,22 +7,21 @@ public class TimeConversion {
     System.out.println(timeConversion("07:05:45PM"));
     System.out.println(timeConversion("12:40:22AM"));
     System.out.println(timeConversion("06:40:03AM"));
+    System.out.println(timeConversion("12:45:54PM"));
 
   }
 
   private static String timeConversion(String s) {
-    if (s.contentEquals("12:00:00AM")) return "00:00:00";
-    else if (s.contentEquals("12:00:00PM")) return "12:00:00";
+    if ("12:00:00AM".contentEquals(s)) return "00:00:00";
+    else if ("12:00:00PM".contentEquals(s)) return "12:00:00";
     else {
-      return String.format("%s:%s",
-              hour(s.substring(0, 2)),
-              s.substring(3, 8));
+      int hh = Integer.parseInt(s.substring(0, 2));
+      if ((hh < 12 && s.charAt(8) == 'A') || (hh == 12 && s.charAt(8) == 'P')) return s.substring(0, 8);
+      else {
+        hh = (hh + 12) % 24;
+        return hh / 10 == 0 ? String.format("0%d:%s", hh, s.substring(3, 8)) : String.format("%d:%s", hh, s.substring(3, 8));
+      }
     }
-  }
-
-  private static String hour(String hh) {
-    int h = (Integer.parseInt(hh) + 12) % 24;
-    return h == 0 ? "00" : String.valueOf(h);
   }
 
 }
