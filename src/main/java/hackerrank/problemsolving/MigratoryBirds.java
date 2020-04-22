@@ -9,9 +9,13 @@ import java.util.stream.Collectors;
 public class MigratoryBirds {
 
   private static int migratoryBirds(List<Integer> arr) {
-    Map<Integer, Long> grouped = arr.stream().collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+    Map<Integer, Long> grouped = arr
+            .stream()
+            .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
 
-    Long maxValue = grouped.values().stream().max(Comparator.comparingLong(i -> i))
+    Long maxValue = grouped.values()
+            .stream()
+            .max(Comparator.comparingLong(i -> i))
             .orElseThrow(RuntimeException::new);
 
     Map.Entry<Integer, Long> result = grouped.entrySet()
