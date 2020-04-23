@@ -22,7 +22,13 @@ public class BirthdatCakeCandles {
   }
 
   private static long find_max_count(int[] arr) {
-    int max = Arrays.stream(arr).max().orElseThrow(NoSuchElementException::new);
-    return Arrays.stream(arr).filter(i -> i == max).count();
+    int max = Arrays
+            .stream(arr)
+            .max()
+            .orElseThrow(NoSuchElementException::new);
+    return Arrays
+            .stream(arr)
+            .filter(i -> i == max)
+            .count();
   }
 }

@@ -14,6 +14,9 @@ public class AppleAndOrange {
   }
 
   private static int countFruits(int houseS, int houseE, int k, int[] fruits) {
-    return (int) Arrays.stream(fruits).filter(value -> (k + value) >= houseS && (k + value) <= houseE).count();
+    return (int) Arrays
+            .stream(fruits)
+            .filter(value -> (k + value) >= houseS && (k + value) <= houseE)
+            .count();
   }
 }
