@@ -12,6 +12,7 @@ public class GradingStudents {
   public static void main(String[] args) {
     System.out.println(gradingStudents1(Arrays.asList(73, 67, 38, 33)));
     System.out.println(gradingStudents2(Arrays.asList(73, 67, 38, 33)));
+    System.out.println(gradingStudents3(Arrays.asList(73, 67, 38, 33)));
   }
 
   public static List<Integer> gradingStudents1(List<Integer> grades) {
@@ -29,4 +30,13 @@ public class GradingStudents {
             .collect(Collectors.toList());
   }
 
+  public static List<Integer> gradingStudents3(List<Integer> grades) {
+    return grades
+            .stream()
+            .map(grade -> {
+              int r = 5 - grade % 5;
+              return grade > 37 && r < 3 ? grade + r : grade;
+            })
+            .collect(Collectors.toList());
+  }
 }
