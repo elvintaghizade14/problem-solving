@@ -13,10 +13,10 @@ public class AppleAndOrange {
     System.out.println(countFruits(s, t, b, oranges));
   }
 
-  private static int countFruits(int houseS, int houseE, int k, int[] fruits) {
-    return (int) Arrays
-            .stream(fruits)
-            .filter(value -> (k + value) >= houseS && (k + value) <= houseE)
+  private static long countFruits(int houseS, int houseE, int tree, int[] fruits) {
+    return Arrays.stream(fruits)
+            .filter(f -> (tree + f) >= houseS && (tree + f) <= houseE)
             .count();
   }
+
 }
