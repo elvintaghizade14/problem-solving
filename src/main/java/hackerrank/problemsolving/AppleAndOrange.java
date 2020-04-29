@@ -1,6 +1,7 @@
 package hackerrank.problemsolving;
 
 import java.util.Arrays;
+import java.util.function.IntPredicate;
 
 public class AppleAndOrange {
 
