@@ -1,6 +1,4 @@
-package hackerrank.problemsolving;
-
-import java.util.Arrays;
+package hackerrank.problem_solving;
 
 public class ElectronicShop {
 
@@ -9,11 +7,6 @@ public class ElectronicShop {
   }
 
   private static int getMoneySpent(int[] keyboards, int[] drives, int b) {
-    int[] sortedDrives = drives.clone();
-    Arrays.sort(sortedDrives);
-    int[] sortedKeyboards = keyboards.clone();
-    Arrays.sort(sortedKeyboards);
-
     throw new IllegalArgumentException("Not implemented yet...");
   }
 }

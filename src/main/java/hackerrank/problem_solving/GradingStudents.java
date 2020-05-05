@@ -1,11 +1,8 @@
-package hackerrank.problemsolving;
+package hackerrank.problem_solving;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Consumer;
-import java.util.function.Function;
-import java.util.function.ToIntFunction;
 import java.util.stream.Collectors;
 
 public class GradingStudents {

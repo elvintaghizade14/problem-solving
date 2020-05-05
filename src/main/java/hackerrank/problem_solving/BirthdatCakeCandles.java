@@ -1,7 +1,6 @@
-package hackerrank.problemsolving;
+package hackerrank.problem_solving;
 
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 

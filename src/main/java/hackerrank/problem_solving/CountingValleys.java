@@ -1,4 +1,4 @@
-package hackerrank.problemsolving;
+package hackerrank.problem_solving;
 
 public class CountingValleys {
   public static void main(String[] args) {

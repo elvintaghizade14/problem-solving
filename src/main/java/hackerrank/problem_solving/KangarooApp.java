@@ -1,4 +1,4 @@
-package hackerrank.problemsolving;
+package hackerrank.problem_solving;
 
 public class KangarooApp {
   public static void main(String[] args) {
