@@ -1,7 +1,8 @@
 package hackerrank.problem_solving;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.Arrays;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 public class EqualizeTheArray {
   public static void main(String[] args) {
@@ -9,7 +10,12 @@ public class EqualizeTheArray {
   }
 
   private static int equalizeArray(int[] arr) {
-    Map<Integer, Integer> counts = new HashMap<>();
-    throw new IllegalArgumentException("Not implemented yet...");
+    return (int) (arr.length - Arrays.stream(arr)
+            .boxed()
+            .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
+            .values()
+            .stream()
+            .max(Long::compareTo)
+            .orElseThrow(RuntimeException::new));
   }
 }
