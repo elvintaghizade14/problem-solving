@@ -21,7 +21,7 @@ public class ACMICPCTeam {
     }
   }
 
-  private static int[] acmTeam(String[] topic) {
+  private static int[] acmTeam(String[] topic)  {
     int len = topic.length;
     List<Integer> data = IntStream.range(0, len).boxed().flatMap(a ->
             IntStream.range(a + 1, len).mapToObj(b -> new Pair<>(a, b)))
