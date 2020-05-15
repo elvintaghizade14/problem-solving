@@ -14,29 +14,16 @@ public class PickingNumbers {
     System.out.println(pickingNumbers(Arrays.asList(1, 2, 2, 3, 1, 2)));
   }
 
-  static class Pair {
-    final int a;
-    final int b;
-
-    Pair(int a, int b) {
-      this.a = a;
-      this.b = b;
-    }
+  private static int pickingNumbers(List<Integer> a) {
+    return a.stream()
+            .map(v -> max_count(v, a))
+            .max(Comparator.comparingInt(v -> v))
+            .orElseThrow(RuntimeException::new);
   }
 
-  public static int pickingNumbers(List<Integer> a) {
-    int max = a.stream()
-            .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
-            .entrySet()
-            .stream()
-            .max(Comparator.comparingLong(Map.Entry::getValue))
-            .orElseThrow(RuntimeException::new)
-            .getKey();
-
-    long low = a.stream().mapToInt(v -> v).filter(v -> (max == v) || (max - v == 1)).count();
-    long high = a.stream().mapToInt(v -> v).filter(v -> (max == v) || (v - max == 1)).count();
-
-//    return (int) Math.max(low, high);
-    throw new IllegalArgumentException("Need to implement..");
+  private static int max_count(int v, List<Integer> a) {
+    long low = a.stream().filter(i -> (i == v) || (v - i == 1)).count();
+    long high = a.stream().filter(i -> (i == v) || (i - v == 1)).count();
+    return (int) Math.max(low, high);
   }
 }
