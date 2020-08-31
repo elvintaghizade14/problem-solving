@@ -1,7 +1,5 @@
 package hackerrank.day30;
 
-import java.util.LinkedList;
-import java.util.Queue;
 import java.util.Scanner;
 
 public class Day22_bst_height {
@@ -45,7 +43,6 @@ public class Day22_bst_height {
   }
 
   public static int getHeight(Node root) {
-//    throw new IllegalArgumentException("Not implemented yet...");
     if (root == null) return -1;
     int left = getHeight(root.left) + 1;
     int right = getHeight(root.right) + 1;
