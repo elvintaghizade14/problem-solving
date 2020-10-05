@@ -5,7 +5,7 @@ import java.util.stream.IntStream;
 
 public class FizzBuzz {
   public static void main(String[] args) {
-
+    fizzBuzz(3);
   }
 
   public static void fizzBuzz(int n) {

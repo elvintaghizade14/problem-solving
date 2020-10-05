@@ -21,15 +21,21 @@ public class ACMICPCTeam {
     }
   }
 
-  private static int[] acmTeam(String[] topic)  {
+  private static int[] acmTeam(String[] topic) {
     int len = topic.length;
-    List<Integer> data = IntStream.range(0, len).boxed().flatMap(a ->
-            IntStream.range(a + 1, len).mapToObj(b -> new Pair<>(a, b)))
+    List<Integer> data = IntStream.range(0, len)
+            .boxed()
+            .flatMap(a -> IntStream.range(a + 1, len)
+                    .mapToObj(b -> new Pair<>(a, b)))
             .map(p -> findCommon(topic, p.a, p.b))
             .filter(n -> n > 0)
             .collect(Collectors.toList());
-    int maxKnow = data.stream().max(Comparator.comparingInt(a -> a)).orElseThrow(RuntimeException::new);
-    int maxGroup = (int) data.stream().filter(n -> n == maxKnow).count();
+    int maxKnow = data.stream()
+            .max(Comparator.comparingInt(a -> a))
+            .orElseThrow(RuntimeException::new);
+    int maxGroup = (int) data.stream()
+            .filter(n -> n == maxKnow)
+            .count();
     return new int[]{maxKnow, maxGroup};
   }
 
