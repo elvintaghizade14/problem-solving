@@ -1,6 +1,6 @@
 package hackerrank.problem_solving;
 
-public class LinkedListoperations {
+public class LinkedListOperations {
 
   static class SinglyLinkedListNode {
     int data;
@@ -28,5 +28,20 @@ public class LinkedListoperations {
     return root;
   }
 
+  static SinglyLinkedListNode deleteNode(SinglyLinkedListNode head, int position) {
+    if (head == null || position == 0) return head.next;
+    SinglyLinkedListNode temp = head;
+    SinglyLinkedListNode prev = null;
+    while (position != 0) {
+      position--;
+      prev = temp;
+      temp = temp.next;
+    }
+    prev.next = temp.next;
+    return head;
+  }
 
+  static void reversePrint(SinglyLinkedListNode head) {
+
+  }
 }
