@@ -1,5 +1,7 @@
 package hackerrank.problem_solving;
 
+import java.util.HashSet;
+
 public class LinkedListOperations {
 
   static class SinglyLinkedListNode {
@@ -41,7 +43,29 @@ public class LinkedListOperations {
     return head;
   }
 
-  static void reversePrint(SinglyLinkedListNode head) {
-
+  static int getNode(SinglyLinkedListNode head, int positionFromTail) {
+    SinglyLinkedListNode temp = head;
+    int size = 0;
+    while (temp != null) {
+      temp = temp.next;
+      size++;
+    }
+    int index = size - positionFromTail - 1;
+    while (index != 0) {
+      index--;
+      head = head.next;
+    }
+    return head.data;
   }
+
+  static SinglyLinkedListNode removeDuplicates(SinglyLinkedListNode head) {
+    if (head == null) return null;
+    SinglyLinkedListNode curr = head;
+    while (curr.next != null) {
+      if (curr.data == curr.next.data) curr.next = curr.next.next;
+      else curr = curr.next;
+    }
+    return head;
+  }
+
 }
