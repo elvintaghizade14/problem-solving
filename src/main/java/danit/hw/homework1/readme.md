@@ -20,7 +20,7 @@ Write a program called "numbers", which makes a random number and offers the pla
 - The task must be performed using arrays (**DO NOT USE THE INTERFACES** `List`, `Set`, `Map`).
 
 #### Advanced complexity. Not necessary to implement:
-
+  
 - Before the every next iteration, the program saves the number entered by the user into the array. After the player has
   guessed the number, before an exit, the program displays the text on the screen: `Your numbers: ` and shows all the
   numbers entered by the player, sorted from larger to smaller.
