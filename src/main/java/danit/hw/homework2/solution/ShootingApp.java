@@ -30,8 +30,6 @@ public class ShootingApp {
                 break;
             }
         }
-
-
     }
 
     private static char[][] getBoard() {
@@ -58,13 +56,12 @@ public class ShootingApp {
             final String line = console.readLn(String.format("Enter %s number: ", dimension));
             try {
                 final int num = TypeConverter.strToInt(line);
-                if (num < 1 || num > 5)
-                    throw new IllegalArgumentException();
+                if (num < 1 || num > 5) throw new IllegalArgumentException();
                 return num;
             } catch (NumberFormatException e) {
                 console.printLn(String.format("Your input: '%s' is invalid. Please, try again.", line));
             } catch (IllegalArgumentException e) {
-                console.printLn(String.format("Input: '%s' is out of bound [1, 5]", line));
+                console.printLn(String.format("Input: '%s' is out of bound: [1, 5]", line));
             }
         }
     }
@@ -83,7 +80,7 @@ public class ShootingApp {
                 console.print(cell);
                 console.print(' ');
             }
-            console.printLn("|");
+            console.printLn('|');
         }
     }
 

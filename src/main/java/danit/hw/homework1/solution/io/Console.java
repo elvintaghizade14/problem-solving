@@ -10,16 +10,21 @@ public interface Console {
     String readLn();
 
     default void printLn(final String line) {
-        print(line);
-        print(this.NEW_LINE);
+        this.print(line);
+        this.print(this.NEW_LINE);
+    }
+
+    default void printLn(final char c) {
+        this.print(c);
+        this.print(this.NEW_LINE);
     }
 
     default void printLn() {
-        print(this.NEW_LINE);
+        this.print(this.NEW_LINE);
     }
 
     default String readLn(final String message) {
-        print(message);
+        this.print(message);
         return readLn();
     }
 }
