@@ -30,8 +30,6 @@ public class ShootingApp {
                 break;
             }
         }
-
-
     }
 
     private static char[][] getBoard() {
