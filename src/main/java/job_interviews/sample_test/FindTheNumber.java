@@ -4,8 +4,9 @@ import java.util.List;
 
 public class FindTheNumber {
 
-    public static String findNumber(List<Integer> arr, int k) {
-        for (Integer num : arr) if (num == k) return "YES";
+    public static String findNumber(List<Integer> arr, int target) {
+        final Integer t = target;
+        for (Integer num : arr) if (num.equals(t)) return "YES";
         return "NO";
     }
 
