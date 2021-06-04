@@ -1,4 +1,4 @@
-package job_interviews.uni.second_task;
+package job_interviews.asoiu.second_task;
 
 import java.util.Arrays;
 import java.util.Random;
@@ -10,7 +10,7 @@ public class SecondTask {
     int[] origin = new Random().ints(25, -100, 100).toArray();
 
     // turn positive all negtives inside it (do not change on original data make copy and change on it)
-    int[] result = convertNegativestoPositive(origin);
+    int[] result = convertNegativesToPositive(origin);
 
     // print origin data and calculated data loop (for-each or enhanced for loop)
     for (int num : origin) System.out.print(num + " ");
@@ -27,7 +27,7 @@ public class SecondTask {
     // System.out.println(Arrays.toString(result));
   }
 
-  public static int[] convertNegativestoPositive(int[] origin) {
+  public static int[] convertNegativesToPositive(int[] origin) {
     int[] copied = Arrays.copyOf(origin, origin.length);
     for (int i = 0; i < copied.length; i++) {
       if (copied[i] < 0) copied[i] = Math.abs(copied[i]); // make positive

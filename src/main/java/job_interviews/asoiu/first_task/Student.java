@@ -1,4 +1,4 @@
-package job_interviews.uni.first_task;
+package job_interviews.asoiu.first_task;
 
 public class Student {
   private final String name;
