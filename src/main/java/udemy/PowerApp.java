@@ -1,4 +1,4 @@
-package sarkhan.birinci_ay;
+package udemy;
 
 import java.util.ArrayList;
 import java.util.List;
