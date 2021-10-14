@@ -9,3 +9,20 @@ Interviews are supposed to be difficult. If you don't get every-or any-answer im
     - specific
     - sufficiently large
     - Not a special case
+
+3. State a Brute Force
+    - explain what the space and time complexity is, and then dive into improvements
+
+4. Optimize
+    - look for any unused information
+    - use a fresh example
+    - solve it "incorrectly"
+    - make time vs. space tradeoff
+    - precompute information
+    - use a hash table
+    - think about the best conceivable runtime
+
+
+
+
+
