@@ -1,0 +1,5 @@
+How to prepare:
+    - try to solve the problem on your own
+    - Write the code on paper
+    - Test your code
+    - type your paper code as-is into a computer
