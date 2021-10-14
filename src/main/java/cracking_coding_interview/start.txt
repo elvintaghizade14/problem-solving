@@ -22,7 +22,20 @@ Interviews are supposed to be difficult. If you don't get every-or any-answer im
     - use a hash table
     - think about the best conceivable runtime
 
+5. Walk Through
+    - solidify your understanding of the algorithm
+    - know what the variables are and when they change
 
+6. Implement
+    - write beautiful code. Beautiful code means:
+        * modularized code
+        * error checks
+        * use other classes/structs where appropriate
+        * good variable names
 
-
-
+7. Test
+    - start with a "conceptual" test
+    - weird looking code
+    - hot spots
+    - small test cases
+    - special cases
