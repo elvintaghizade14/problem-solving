@@ -15,7 +15,11 @@
 4. Optimize & Solve Technique #4: "Base Case and Build"
 
 5. Optimize & Solve Technique #5: "Data Structure Brainstorm"
-    -
+
+6. Best Conceivable Runtime (BCR)
+    - The best conceivable runtime is, literally, the best runtime you could conceive of a solution to a problem having.
+      You can easily prove that there is no way you could beat the BCR.
+
 
 
 
