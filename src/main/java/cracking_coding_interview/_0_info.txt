@@ -1,3 +1,9 @@
+Core requirements:
+    - Analytical skills
+    - Coding skills
+    - Experience
+    - Communication skills
+
 How to prepare:
     - try to solve the problem on your own
     - Write the code on paper
