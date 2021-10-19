@@ -1,21 +1,21 @@
 package ocp.nested_classes.local_inner;
 
-public class Outer {
+public class OuterClass {
     private int length = 5;
 
     public void calculate() {
         final int width = 20;
-        class Inner {
+        class InnerClass {
             public void multiply() {
                 System.out.println(length * width);
             }
         }
-        final Inner inner = new Inner();
-        inner.multiply();
+        final InnerClass innerClass = new InnerClass();
+        innerClass.multiply();
     }
 
     public static void main(String[] args) {
-        final Outer outer = new Outer();
-        outer.calculate();
+        final OuterClass outerClass = new OuterClass();
+        outerClass.calculate();
     }
 }
