@@ -1,4 +1,4 @@
-package ocp.nested_classes;
+package ocp.nested_classes.member_inner;
 
 public class SameVarInnerClass {
     private final int x = 10;
