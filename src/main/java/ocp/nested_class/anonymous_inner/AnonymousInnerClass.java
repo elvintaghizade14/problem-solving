@@ -1,4 +1,4 @@
-package ocp.nested_classes.anonymous_inner;
+package ocp.nested_class.anonymous_inner;
 
 
 public class AnonymousInnerClass {

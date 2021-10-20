@@ -1,4 +1,4 @@
-package ocp.nested_classes.member_inner;
+package ocp.nested_class.member_inner;
 
 public class MemberInnerClass {
     private final String GREETING = "Hi";

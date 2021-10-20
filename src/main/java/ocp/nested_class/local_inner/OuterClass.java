@@ -1,4 +1,4 @@
-package ocp.nested_classes.local_inner;
+package ocp.nested_class.local_inner;
 
 public class OuterClass {
     private int length = 5;
