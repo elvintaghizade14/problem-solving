@@ -1,0 +1,7 @@
+A local inner class is a nested class defined within a method.
+
+Local inner classes have the following properties:
+    - They do not have access specifier
+    - They cannot be declared static and cannot declare static fields or methods
+    - They have access to all fields and methods of the enclosing class
+    - They do not have access to local variables of a method unless those variables are final or effectively final
