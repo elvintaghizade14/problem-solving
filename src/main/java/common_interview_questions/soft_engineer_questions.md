@@ -1,4 +1,4 @@
-# Software Engineer Questions  Asked In Technical Interviews
+# Software Engineer Questions Asked in Technical Interviews
 
 ## Overview
 
