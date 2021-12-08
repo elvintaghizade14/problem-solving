@@ -1,47 +1,34 @@
 package job_interviews.aws2;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class AmazonCustomerReviews {
     public static void main(String[] args) {
-
+        List<List<String>> result = searchSuggestions(new ArrayList<>(Arrays.asList("mobile", "mouse", "moneypot", "monitor", "mousepad")), "mouse");
+        for (List<String> keywords : result) System.out.println(keywords);
     }
 
-    public static List<List<String>> searchSuggestions(List<String> repository, String customerQuery) {
-        if (customerQuery == null || customerQuery.length() < 2) return new ArrayList<>(new ArrayList<>());
-        final int length = customerQuery.length();
-        final List<List<String>> results = new ArrayList<>(new ArrayList<>());
-        List<String> keywords = new ArrayList<>();
-        for (int i = 2; i <= length; i++) {
-            int counter = 0;
-            final String substring = customerQuery.substring(0, i);
-            if (i == 2) {
-                for (String keyword : repository) {
-                    if (counter > 3) break;
-                    if (keyword.startsWith(substring)) {
-                        counter++;
-                        keywords.add(keyword.toLowerCase());
-                        Collections.sort(keywords);
-                    }
-                }
-                if (keywords.size() > 2) keywords = keywords.subList(0, 3);
-                results.add(keywords);
-            } else {
-                final List<String> continuedKeywords = new ArrayList<>();
-                for (String keyword : keywords) {
-                    if (counter > 3) break;
-                    if (keyword.startsWith(substring)) {
-                        counter++;
-                        continuedKeywords.add(keyword.toLowerCase());
-                        Collections.sort(continuedKeywords);
-                    }
-                }
-                results.add(continuedKeywords);
-                keywords = continuedKeywords;
-            }
+    public static List<List<String>> searchSuggestions(final List<String> repository, final String customerQuery) {
+        if (customerQuery == null || customerQuery.length() < 2) return new ArrayList<>();
+
+        final List<List<String>> suggestions = new ArrayList<>();
+        final String lowerCaseQuery = customerQuery.toLowerCase();
+        final List<String> lowerCaseRepo = repository.stream().map(String::toLowerCase).collect(Collectors.toList());
+
+        for (int endIndex = 2; endIndex <= lowerCaseQuery.length(); endIndex++) {
+            final String subQuery = lowerCaseQuery.substring(0, endIndex);
+            lowerCaseRepo.removeIf(keyword -> !keyword.startsWith(subQuery));
+            Collections.sort(lowerCaseRepo);
+            List<String> keywords;
+            if (lowerCaseRepo.size() >= 3) keywords = new ArrayList<>(lowerCaseRepo.subList(0, 3));
+            else keywords = new ArrayList<>(lowerCaseRepo);
+            suggestions.add(keywords);
         }
-        return results;
+
+        return suggestions;
     }
 }
