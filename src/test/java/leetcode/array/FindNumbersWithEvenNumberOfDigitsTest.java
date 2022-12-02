@@ -1,9 +1,9 @@
-package com.leetcode.array;
+package leetcode.array;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class FindNumbersWithEvenNumberOfDigitsTest {
     private FindNumbersWithEvenNumberOfDigits findNumbersWithEvenNumberOfDigits;
@@ -37,13 +37,14 @@ public class FindNumbersWithEvenNumberOfDigitsTest {
     @Test
     public void leetcodeExample1Test() {
         int expected = 2;
-        int actual = findNumbersWithEvenNumberOfDigits.findNumbers(new int[]{12,345,2,6,7896});
+        int actual = findNumbersWithEvenNumberOfDigits.findNumbers(new int[]{12, 345, 2, 6, 7896});
         assertEquals(expected, actual);
     }
+
     @Test
     public void leetcodeExample2Test() {
         int expected = 1;
-        int actual = findNumbersWithEvenNumberOfDigits.findNumbers(new int[]{555,901,482,1771});
+        int actual = findNumbersWithEvenNumberOfDigits.findNumbers(new int[]{555, 901, 482, 1771});
         assertEquals(expected, actual);
     }
 }
