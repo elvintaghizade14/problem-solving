@@ -11,45 +11,49 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.version>1.8</java.version>
-        <source.java>1.8</source.java>
-        <target.java>1.8</target.java>
+
+        <java.version>11</java.version>
+        <source.java>11</source.java>
+        <target.java>11</target.java>
+
+        <maven-compiler-plugin-version>3.8.1</maven-compiler-plugin-version>
+        <maven-surefire-plugin-version>3.0.0-M5</maven-surefire-plugin-version>
+        <junit-jupiter-version>5.8.2</junit-jupiter-version>
     </properties>
 
     <build>
         <plugins>
-            <!-- Java 8 source and target settings-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
+                <version>${maven-compiler-plugin-version}</version>
                 <configuration>
-                    <source>8</source>
-                    <target>8</target>
+                    <source>${source.java}</source>
+                    <target>${target.java}</target>
                 </configuration>
             </plugin>
-             <plugin>
+            <plugin>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.0.0-M5</version>
+                <version>${maven-surefire-plugin-version}</version>
             </plugin>
         </plugins>
     </build>
 
     <dependencies>
-        <!--  Junit tests section  -->
         <dependency>
+
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
-            <version>5.9.0</version>
+            <version>${junit-jupiter-version}</version>
             <scope>test</scope>
         </dependency>
-        <!--  Junit tests section  -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
-            <version>5.9.0</version>
+            <version>${junit-jupiter-version}</version>
             <scope>test</scope>
         </dependency>
+
         <dependency>
             <groupId>org.hamcrest</groupId>
             <artifactId>hamcrest-core</artifactId>
@@ -61,7 +65,7 @@
             <artifactId>assertj-core</artifactId>
             <version>3.23.1</version>
         </dependency>
-        <!-- logger interface -->
+
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-api</artifactId>
@@ -72,7 +76,7 @@
             <artifactId>log4j-core</artifactId>
             <version>2.19.0</version>
         </dependency>
-        <!-- lombok -->
+
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -83,13 +87,13 @@
             <artifactId>vavr</artifactId>
             <version>1.0.0-alpha-3</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.json/json -->
+
         <dependency>
             <groupId>org.json</groupId>
             <artifactId>json</artifactId>
             <version>20220924</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
