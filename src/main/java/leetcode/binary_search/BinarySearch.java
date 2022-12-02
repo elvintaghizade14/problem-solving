@@ -1,4 +1,4 @@
-package com.leetcode.binary_search;
+package leetcode.binary_search;
 
 public class BinarySearch {
     public int search(int[] nums, int target) {
