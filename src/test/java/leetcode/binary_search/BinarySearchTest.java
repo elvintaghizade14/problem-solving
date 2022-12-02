@@ -1,4 +1,4 @@
-package com.leetcode.binary_search;
+package leetcode.binary_search;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
