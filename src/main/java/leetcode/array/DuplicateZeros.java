@@ -1,4 +1,4 @@
-package com.leetcode.array;
+package leetcode.array;
 
 public class DuplicateZeros {
     public void duplicateZeros(int[] arr) {
