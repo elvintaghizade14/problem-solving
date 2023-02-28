@@ -1,0 +1,27 @@
+Terminology summary
+    - Root is the topmost node of the tree
+    - Edge is the link between two nodes
+    - Child is a node that has a parent node
+    - Parent is a node that has an edge to a child node
+    - Leaf is a node that does not have a child node in the tree
+    - Height is the length of the longest path to a leaf
+    - Depth is the length of the path to its root
+
+Binary trees
+    “In computer science, a binary tree is a tree data structure in which each node has at the most two children,
+    which are referred to as the left child and the right child.” — Wikipedia
+
+    Binary tree is that it is a collection of nodes. Each node has three attributes: value, left_child, and right_child.
+
+Tree traversals
+    We have two options here: Depth-First Search (DFS) and Breadth-First Search (BFS).
+
+    DFS “is an algorithm for traversing or searching tree data structure. One starts at the root and explores as far as
+    possible along each branch before backtracking.” — Wikipedia. Types of DFS: pre-order, in-order, and post-order.
+
+    BFS “is an algorithm for traversing or searching tree data structure. It starts at the tree root and explores
+    the neighbor nodes first, before moving to the next level neighbors.” — Wikipedia
+
+Binary Search tree
+    “A Binary Search Tree is sometimes called ordered or sorted binary trees, and it keeps its values in sorted order,
+    so that lookup and other operations can use the principle of binary search” — Wikipedia
