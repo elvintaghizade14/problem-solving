@@ -1,4 +1,4 @@
-# Optimize & Solve techniques
+## Optimize & Solve techniques
 
 ### 1. Optimize & Solve Technique #1: Look for "BUD":
     - Bottlenecks - A bottleneck is a part of your algorithm that slows down the overall runtime
