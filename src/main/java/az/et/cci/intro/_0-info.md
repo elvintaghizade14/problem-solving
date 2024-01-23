@@ -1,15 +1,16 @@
-Core requirements:
+# Cracking Coding Interview (CCI)
+##  Core requirements:
     - Analytical skills
     - Coding skills
     - Experience
     - Communication skills
 
-Key points:
+##  Key points:
     - System design
     - Scalability
     - Object oriented Design
 
-How to prepare:
+##  How to prepare:
     - try to solve the problem on your own
     - Write the code on paper
     - Test your code
