@@ -1,9 +1,9 @@
 # Cracking Coding Interview (CCI)
 ##  Core requirements:
+    - Communication skills
     - Analytical skills
     - Coding skills
     - Experience
-    - Communication skills
 
 ##  Key points:
     - Object oriented Design
