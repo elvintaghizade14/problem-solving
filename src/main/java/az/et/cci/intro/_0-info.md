@@ -6,9 +6,9 @@
     - Communication skills
 
 ##  Key points:
+    - Object oriented Design
     - System design
     - Scalability
-    - Object oriented Design
 
 ##  How to prepare:
     - try to solve the problem on your own
